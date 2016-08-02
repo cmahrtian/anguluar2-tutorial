@@ -1,7 +1,13 @@
 import { Component } from '@angular/core';
+import { CarPartsComponent } from './car-parts.component';
 
 @Component({
   selector: 'my-app',
-  template: '<h1>My SECOND Angular 2 App</h1>'
+  template: `<h1>{{title}}</h1>
+    <car-parts></car-parts>`,
+  directives: [CarPartsComponent]
 })
-export class AppComponent { }
+
+export class AppComponent { 
+  title = 'Ultra Racing';
+}
